@@ -24,7 +24,6 @@ defmodule ExLogger.Backend.Splunk do
   	object = [
   		timestamp: format_timestamp(timestamp),
   		level: "#{level}",
-  		source: format_location(module, file, line),
   		message: iolist_to_binary(ExLogger.Format.format(msg, object)),
   		object: format_object(object),
   		module: inspect(module),
@@ -69,11 +68,6 @@ defmodule ExLogger.Backend.Splunk do
     time = :calendar.now_to_local_time(timestamp)
     {{year, month, day}, {hour, minute, second}} = time
     "#{year}-#{month}-#{day}T#{hour}:#{minute}:#{second}." <> String.rjust("#{milli}", 3, ?0)
-  end
-
-  defp format_location(nil, _, _), do: nil
-  defp format_location(module, file, line) do
-    "#{inspect module}(#{file}:#{line})"
   end
 
   defp format_pid(nil), do: nil
