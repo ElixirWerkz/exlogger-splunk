@@ -82,7 +82,7 @@ defmodule ExLogger.Backend.Splunk do
   defp format_object(list) when is_list(list) do
   	lc item inlist list, do: format_object(item)
   end
-  defp format_object({key, value}) do
+  defp format_object({key, value}) when is_binary(key) or is_atom(key) do
   	{key, format_object(value)}
   end
   defp format_object(tuple) when is_tuple(tuple) do
