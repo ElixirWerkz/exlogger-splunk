@@ -82,6 +82,9 @@ defmodule ExLogger.Backend.Splunk do
   defp format_object(list) when is_list(list) do
   	lc item inlist list, do: format_object(item)
   end
+  defp format_object(reason) when is_record(reason, ExLogger.ErrorLoggerHandler.Reason) do
+    inspect(reason)
+  end
   defp format_object({key, value}) when is_binary(key) or is_atom(key) do
   	{key, format_object(value)}
   end
