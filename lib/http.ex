@@ -1,4 +1,4 @@
-defmodule ExLogger.Backend.Splunk do
+defmodule ExLogger.Backend.Splunk.HTTP do
   use ExLogger.Backend
 
   @source_type "json_predefined_timestamp"

@@ -1,5 +1,8 @@
-[ "exlogger": {:git, "git://github.com/ElixirWerkz/exlogger.git", "b546ae362da2c013880a27256660dc0bc48e0643", []},
+[ "exlogger": {:git, "git://github.com/ElixirWerkz/exlogger.git", "4072d9750565f27bc1f601817a4fe60ed45a9a2e", []},
+  "finalizer": {:git, "git://github.com/meh/elixir-finalizer.git", "9c38d9145824a46c66f1a010e137a953a6c78e04", []},
   "hackney": {:git, "git://github.com/benoitc/hackney.git", "25a7fa2115680a09c0e932f71f22082b29d1b714", []},
-  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "95492e9a4f418c10ff1c74d669d89ca5e8ac4d67", []},
+  "jsex": {:git, "git://github.com/talentdeficit/jsex.git", "1e89a76f770e14bbbd1b5bebfc05312a984f21a4", []},
   "jsx": {:git, "git://github.com/talentdeficit/jsx.git", "e50af6e109cb03bd26acf715cbc77de746507d1d", [{:tag, "v1.4.3"}]},
-  "mimetypes": {:git, "https://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [{:ref, "master"}]} ]
+  "mimetypes": {:git, "https://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [{:ref, "master"}]},
+  "resource": {:git, "git://github.com/tonyrog/resource.git", "b9e1adcadcc8cb59130e0bbecbbe6777bb8d7c78", []},
+  "socket": {:git, "git://github.com/meh/elixir-socket.git", "dd1eba4e55fd222c1e0bb263222dc7caa4f41f52", []} ]

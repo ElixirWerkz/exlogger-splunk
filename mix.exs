@@ -4,13 +4,13 @@ defmodule ExLogger.Splunk.Mixfile do
   def project do
     [ app: :exlogger_splunk,
       version: "0.0.1",
-      elixir: ">= 0.10.3",
+      elixir: ">= 0.12.0",
       deps: deps ]
   end
 
   # Configuration for the OTP application
   def application do
-    [applications: %w(exlogger jsex hackney)a]
+    [applications: %w(exlogger jsex hackney socket)a]
   end
 
   defp deps do
@@ -18,6 +18,7 @@ defmodule ExLogger.Splunk.Mixfile do
       {:exlogger, github: "ElixirWerkz/exlogger"},
       {:jsex,     github: "talentdeficit/jsex"},
       {:hackney,  github: "benoitc/hackney"},
+      {:socket,   github: "meh/elixir-socket"},
     ]
   end
 end
